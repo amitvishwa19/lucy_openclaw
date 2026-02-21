@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashacarewell - Hospital Management Made Simple</title>
+  <meta name="description" content="Affordable, easy-to-use Hospital Management CRM for Indian hospitals & clinics. With WhatsApp integration.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1F2937; background: #fff; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .btn { display: inline-block; padding: 14px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+    .btn-primary { background: #F59E0B; color: white; }
+    .btn-primary:hover { background: #D97706; }
+    .btn-secondary { border: 2px solid white; color: white; background: transparent; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+    .section { padding: 80px 0; }
+    .section-title { font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 16px; }
+    .section-subtitle { text-align: center; color: #6B7280; max-width: 700px; margin: 0 auto 48px; }
+    
+    /* Header */
+    header { padding: 20px 0; position: sticky; top: 0; background: white; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 700; color: #2563EB; }
+    .logo span { color: #10B981; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; color: #374151; font-weight: 500; }
+    .nav-links a:hover { color: #2563EB; }
+    
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #2563EB 0%, #10B981 100%); color: white; padding: 120px 0 100px; position: relative; overflow: hidden; }
+    .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-text h1 { font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; }
+    .hero-text p { font-size: 20px; opacity: 0.9; margin-bottom: 32px; }
+    .hero-actions { display: flex; gap: 16px; margin-bottom: 32px; }
+    .trust-badges { display: flex; gap: 24px; font-size: 14px; opacity: 0.9; }
+    .hero-visual { position: relative; }
+    .hero-visual img { width: 100%; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.2); }
+    
+    /* Features */
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .feature-card { padding: 32px; border-radius: 12px; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.2s; }
+    .feature-card:hover { transform: translateY(-5px); }
+    .feature-icon { width: 56px; height: 56px; background: #EFF6FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .feature-icon svg { width: 28px; height: 28px; color: #2563EB; }
+    .feature-card h3 { font-size: 20px; margin-bottom: 12px; }
+    .feature-card p { color: #6B7280; font-size: 15px; }
+    
+    /* Pricing */
+    .pricing { background: #F9FAFB; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .pricing-card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); position: relative; }
+    .pricing-card.popular { border: 2px solid #2563EB; }
+    .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2563EB; color: white; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
+    .price { font-size: 48px; font-weight: 700; color: #1F2937; margin: 16px 0; }
+    .price span { font-size: 16px; color: #6B7280; }
+    .pricing-features { list-style: none; margin: 24px 0; }
+    .pricing-features li { padding: 8px 0; color: #4B5563; display: flex; align-items: center; gap: 8px; }
+    .pricing-features li::before { content: "✓"; color: #10B981; font-weight: 700; }
+    .pricing-card .btn { width: 100%; text-align: center; }
+    
+    /* Testimonials */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .testimonial-card { background: white; border-radius: 12px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .testimonial-text { font-style: italic; color: #4B5563; margin-bottom: 20px; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar { width: 48px; height: 48px; border-radius: 50%; background: #E5E7EB; }
+    .author-info h4 { font-size: 16px; margin-bottom: 4px; }
+    .author-info p { font-size: 14px; color: #6B7280; }
+    
+    /* CTA */
+    .cta { background: linear-gradient(135deg, #1F2937 0%, #111827 100%); color: white; text-align: center; padding: 80px 0; }
+    .cta h2 { font-size: 36px; margin-bottom: 24px; }
+    .cta p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    
+    /* Footer */
+    footer { background: #1F2937; color: white; padding: 60px 0 20px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { margin-bottom: 20px; font-weight: 600; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col a { color: #9CA3AF; text-decoration: none; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9CA3AF; font-size: 14px; }
+    
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero-content { grid-template-columns: 1fr; text-align: center; }
+      .hero-actions { justify-content: center; }
+      .trust-badges { justify-content: center; flex-wrap: wrap; }
+      .features-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .nav-links { display: none; }
+      .hero-text h1 { font-size: 36px; }
+      .section-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">Ashacare<span>well</span></div>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#cta" class="btn btn-primary">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hospital Management Made Simple</h1>
+          <p>Affordable, easy-to-use CRM for Indian hospitals & clinics. With WhatsApp integration to streamline patient communication.</p>
+          <div class="hero-actions">
+            <a href="#cta" class="btn btn-primary">Start Free Trial</a>
+            <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+          </div>
+          <div class="trust-badges">
+            <span>✓ Free 30-day trial</span>
+            <span>✓ No credit card required</span>
+            <span>✓ 24x7 support</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="dashboard-mockup.png" alt="Ashacarewell Dashboard" width="600" height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything You Need to Run Your Hospital</h2>
+      <p class="section-subtitle">Comprehensive features designed specifically for Indian healthcare facilities</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Patient Management</h3>
+          <p>Complete patient records, medical history, demographics, and visit tracking in one secure place.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Appointment Scheduling</h3>
+          <p>Online booking, doctor calendars, and automated WhatsApp/SMS reminders to reduce no-shows.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Billing & GST</h3>
+          <p>GST-compliant invoices, insurance claim tracking, and integration with all major payment gateways.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Pharmacy & Inventory</h3>
+          <p>Real-time stock tracking, expiry alerts, auto-reorder, and supplier management.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Reports & Analytics</h3>
+          <p>Daily revenue, occupancy rates, doctor performance, and custom report builder.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: #25D366;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </div>
+          <h3>WhatsApp Integration</h3>
+          <p>Send appointment reminders, OTPs, payment links, and notifications directly via WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">Choose the plan that fits your hospital size. No hidden fees.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Basic</h3>
+          <div class="price">₹5,000<span>/month</span></div>
+          <p>Up to 20 beds</p>
+          <ul class="pricing-features">
+            <li>Patient Management</li>
+            <li>Appointment Scheduling</li>
+            <li>Billing & Invoices</li>
+            <li>Basic Reports</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary">Start Free Trial</a>
+        </div>
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Standard</h3>
+          <div class="price">₹15,000<span>/month</span></div>
+          <p>21 - 100 beds</p>
+          <ul class="pricing-features">
+            <li>All Basic features</li>
+            <li>Pharmacy & Inventory</li>
+            <li>Laboratory Module</li>
+            <li>WhatsApp Integration</li>
+            <li>Priority Support</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary">Start Free Trial</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Premium</h3>
+          <div class="price">₹30,000<span>/month</span></div>
+          <p>101 - 300 beds</p>
+          <ul class="pricing-features">
+            <li>All Standard features</li>
+            <li>Advanced Analytics</li>
+            <li>API Access</li>
+            <li>Custom Reports</li>
+            <li>24x7 Phone Support</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary">Start Free Trial</a>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 24px; color: #6B7280;">Annual billing: 10% discount. Custom plans available for 300+ beds.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Trusted by Healthcare Providers</h2>
+      <p class="section-subtitle">See what our customers say about Ashacarewell</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Ashacarewell reduced our administrative work by 60%. The WhatsApp reminders alone cut our no-show rate in half.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+              <h4>Dr. Rajesh Kumar</h4>
+              <p>City Care Hospital, Delhi</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Finally an HMS that's actually easy to use. Our staff learned it in just 2 days. The billing with GST is seamless."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+              <h4>Mrs. Priya Sharma</h4>
+              <p>Sharma Nursing Home, Mumbai</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The pharmacy inventory feature alone saved us lakhs in stock optimization. Highly recommended for medium hospitals."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+              <h4>Dr. Arvind Patel</h4>
+              <p>Patel Hospital, Ahmedabad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <h2>Ready to Digitize Your Hospital?</h2>
+      <p>Start your 30-day free trial today. No credit card required. Set up in minutes, not months.</p>
+      <a href="https://wa.me/919712340450" class="btn btn-primary" style="background: #25D366; font-size: 18px; padding: 16px 40px;">Start Free Trial →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="color: white; margin-bottom: 16px;">Ashacare<span>well</span></div>
+          <p style="color: #9CA3AF;">Making hospital management simple, affordable, and efficient for Indian healthcare providers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#demo">Demo</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 India</li>
+            <li>📞 +91 9712340450</li>
+            <li>✉️ info@ashacarewell.com</li>
+            <li><a href="https://wa.me/919712340450" style="color: #25D366;">WhatsApp Chat</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ashacarewell. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

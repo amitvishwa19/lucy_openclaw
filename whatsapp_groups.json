@@ -1,0 +1,17 @@
+{
+  "groups": [
+    { "name": "", "jid": "120363425159056861@g.us", "purpose": "No name group", "members_count": 0, "is_active": true },
+    { "name": "Devlomatix Solutions", "jid": "919712340450-1627566800@g.us", "purpose": "Devlomatix company group", "members_count": 0, "is_active": true },
+    { "name": "ACS_Software Development", "jid": "120363416979362918@g.us", "purpose": "ACS software dev team", "members_count": 0, "is_active": true },
+    { "name": "Music Website", "jid": "120363023283784801@g.us", "purpose": "Music website project", "members_count": 0, "is_active": true },
+    { "name": "", "jid": "120363406418120272@g.us", "purpose": "Unnamed group", "members_count": 0, "is_active": true },
+    { "name": "Vishwakarma", "jid": "120363424727145497@g.us", "purpose": "Community/religious group", "members_count": 0, "is_active": true },
+    { "name": "Acs Baroda App Testing", "jid": "120363404408002842@g.us", "purpose": "ACS Baroda app testing", "members_count": 0, "is_active": true },
+    { "name": "ACS TechHub", "jid": "120363425196039222@g.us", "purpose": "ACS tech discussions", "members_count": 0, "is_active": true },
+    { "name": "GALAXY 10 GROUP", "jid": "919924115279-1476380319@g.us", "purpose": "Galaxy 10 group chat", "members_count": 0, "is_active": true },
+    { "name": "2016-JAI JAVAN", "jid": "919978445352-1371193177@g.us", "purpose": "Jai Javan group (2016)", "members_count": 0, "is_active": true },
+    { "name": "Nav Majisa Milk", "jid": "120363212085274606@g.us", "purpose": "Nav Majisa Milk group", "members_count": 0, "is_active": true }
+  ],
+  "last_updated": "2025-02-20",
+  "total_groups": 11
+}
