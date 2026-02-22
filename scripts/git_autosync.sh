@@ -12,7 +12,7 @@ if git status --porcelain | grep -q .; then
 
   git add -A
   git commit -m "Auto-sync: $(date '+%Y-%m-%d %H:%M')" || echo "No changes to commit"
-  git push origin master
+  git push origin main
 
   echo "[$(date)] Sync complete"
 else
