@@ -25,14 +25,14 @@ if [ -f "/home/ubuntu/README.md" ]; then
   cp -f "/home/ubuntu/README.md" "$WS/README.md"
 fi
 
-# Check if there are any changes to commit
-if git diff-index --quiet HEAD --; then
+# Stage all changes (including new files)
+git add -A >> "$LOG" 2>&1
+
+# Check if there are any staged changes to commit
+if git diff-index --cached --quiet HEAD --; then
   echo "$(date '+%Y-%m-%d %H:%M:%S'): No changes to backup." >> "$LOG"
   exit 0
 fi
-
-# Stage all changes (except ignored files)
-git add -A
 
 # Create commit with timestamp
 COMMIT_MSG="Auto-backup $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
