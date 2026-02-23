@@ -19,6 +19,12 @@ fi
 # Fetch remote to check if we're behind (optional, but helps avoid conflicts)
 git fetch origin main >> "$LOG" 2>&1 || true
 
+# Sync README.md from home folder if present
+if [ -f "/home/ubuntu/README.md" ]; then
+  echo "📝 Syncing README.md from /home/ubuntu/" >> "$LOG"
+  cp -f "/home/ubuntu/README.md" "$WS/README.md"
+fi
+
 # Check if there are any changes to commit
 if git diff-index --quiet HEAD --; then
   echo "$(date '+%Y-%m-%d %H:%M:%S'): No changes to backup." >> "$LOG"
