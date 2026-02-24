@@ -41,6 +41,12 @@ git commit -m "$COMMIT_MSG" >> "$LOG" 2>&1
 # Push to origin/main
 if git push origin main >> "$LOG" 2>&1; then
   echo "$(date '+%Y-%m-%d %H:%M:%S'): Backup successful." >> "$LOG"
+  # Also create/update the restore snapshot (captures current state)
+  if "$WS/scripts/create-snapshot.sh" >> "$LOG" 2>&1; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): Snapshot updated." >> "$LOG"
+  else
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): Snapshot FAILED." >> "$LOG"
+  fi
 else
   echo "$(date '+%Y-%m-%d %H:%M:%S'): Backup FAILED to push. Check auth/network." >> "$LOG"
   exit 1
