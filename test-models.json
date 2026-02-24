@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "testConfig": true,
+    "addedAt": "2026-02-24T06:17:00Z",
+    "addedBy": "Lucy",
+    "purpose": "Test additional free models before production rollout"
+  },
+  "agents": {
+    "defaults": {
+      "models": {
+        "openrouter/google/gemini-2.0-flash-001:free": {
+          "alias": "Gemini Flash 2.0 (Free)"
+        },
+        "openrouter/meta-llama/llama-3.1-8b-instruct:free": {
+          "alias": "Llama 3.1 8B (Free)"
+        },
+        "openrouter/mistralai/mixtral-8x7b-instruct:free": {
+          "alias": "Mixtral 8x7B (Free)"
+        },
+        "openrouter/anthropic/claude-3-haiku:free": {
+          "alias": "Claude 3 Haiku (Free)"
+        }
+      }
+    }
+  }
+}
