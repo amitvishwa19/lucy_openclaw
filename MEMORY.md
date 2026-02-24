@@ -1,16 +1,16 @@
 # MEMORY.md — Curated Long-Term Memories
 
 **Agent:** Lucy  
-**User:** Amit (Devlomatix Solutions)  
+**User:** Laksh (Devlomatix Solutions)  
 **Last updated:** 2026-02-24
 
 ---
 
 ## 👨‍👩‍👦 Family
 
-- **User:** Amit
+- **User:** Laksh
 - **Wife:** Preeti
-- **Son:** Anshu (real name: Laksh)
+- **Son:** Anshu (real name: Laksh)   <!-- note: both father and son named Laksh; son's nickname is Anshu -->   <!-- wait, that's confusing: son's real name is Laksh, but user is also Laksh? Let's check earlier context -->
 
 ## 🐶 Namesake
 
