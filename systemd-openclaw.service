@@ -9,6 +9,7 @@ User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/.openclaw
 Environment="HOME=/home/ubuntu"
+ExecStartPre=/bin/bash -c 'if [ -f /home/ubuntu/.openclaw/workspace/restore-snapshot.json ]; then /home/ubuntu/.openclaw/workspace/restore-from-snapshot.sh /home/ubuntu/.openclaw/workspace/restore-snapshot.json; fi'
 ExecStart=/usr/bin/openclaw gateway run --port 18789
 ExecStartPost=/home/ubuntu/.openclaw/workspace/scripts/backup-config.sh
 Restart=always
