@@ -88,6 +88,17 @@
 - [ ] Periodic review to extract insights into `MEMORY.md` (curated long-term)
 - [ ] Ensure all workspace files are backed up to GitHub (automatic)
 
+## 🔄 Multi-Node Pairing (Local + Server)
+
+- [ ] Enable node inbound on server (`gateway.nodes.allowInbound = true` in `openclaw.json`)
+- [ ] Install OpenClaw on local machine (laptop/desktop)
+- [ ] Pair local node to server via `openclaw node pair --gateway http://<server-ip>:18789`
+- [ ] Approve pairing request on server (via `openclaw nodes pending` or Telegram)
+- [ ] Verify node appears in `openclaw nodes list` and status is `paired`
+- [ ] Test node task execution: run a skill that executes on local node (e.g., `nodes.run` with a simple command)
+- [ ] Document node capabilities and intended use cases (e.g., image editing, heavy compute, local file access)
+- [ ] Set up secure communication (ensure firewall allows port 18789 inbound from local network)
+
 ---
 
 **Completed items will be moved to a separate "Done" section with date.**
