@@ -10,7 +10,7 @@
 
 - **User:** Amit
 - **Wife:** Preeti
-- **Son:** Anshu
+- **Son:** Anshu (real name: Laksh)
 
 ## 🐶 Namesake
 
