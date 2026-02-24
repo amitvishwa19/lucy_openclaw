@@ -24,6 +24,17 @@
 
 **Note:** 4 models are in `test-models.json`; need promotion to main config after testing.
 
+## 🌐 Alternative LLM Providers (Backup/Fallback)
+
+- [ ] Integrate Google AI Studio as secondary provider (separate free quota)
+  - [ ] Get API key from https://aistudio.google.com (2M tokens/day free)
+  - [ ] Add `google` provider configuration to `openclaw.json`
+  - [ ] Add Google models (e.g., `google/gemini-2.0-flash`) to `agents.defaults.models`
+  - [ ] Test via `/model google/gemini-2.0-flash`
+  - [ ] Document switching command for fallback scenarios
+- [ ] Consider Groq (Llama/Mixtral) for high-throughput free tier
+- [ ] Set up automatic model fallback when OpenRouter models return `unavailable` or `429`
+
 ---
 
 ## 📄 GST & Compliance (Solar Cleaning Vertical)
