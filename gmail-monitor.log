@@ -1,0 +1,309 @@
+Gmail monitor started. Polling every minute. Ctrl+C to stop.
+[2026-02-24T03:27:31.819Z] Credentials loaded. Access token (first 30 chars): ya29.a0ATkoCc7jze-lkcCcUFQokUJ...
+[2026-02-24T03:27:32.428Z] list.messages length: 10 list keys: [ 'messages', 'nextPageToken', 'resultSizeEstimate' ]
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:32.991Z
+From: Google <no-reply@accounts.google.com>
+Subject: Security alert
+Snippet: New signin to your account devlomatix@gmail.com We noticed a new sign-in to your Google Account. If this was you, you don&#39;t need to do anything. If not, we&#39;ll help you secure your account.
+Body (first 500 chars):
+[image: Google]
+New signin to your account
+
+
+devlomatix@gmail.com
+We noticed a new sign-in to your Google Account. If this was you, you don’t
+need to do anything. If not, we’ll help you secure your account.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=devlomatix@gmail.com&continue=https://myaccount.google.com/alert/nt/1771899386000?rfn%3D325%26rfnc%3D1%26eid%3D6337315692914948648%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notificati...
+Message ID: 19c8d6f038b574b1
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:32.997Z
+From: Platform Notifications <PlatformNotifications-noreply@google.com>
+Subject: Your project black-transport-471706-j8 has been shut down
+Snippet: Project Permanent Deletion Warning Dear Developer, Your Google Cloud project black-transport-471706-j8 was shut down on February 24, 2026 2:13:21 AM UTC. Shut-down projects and the data stored in them
+Body (first 500 chars):
+Project Permanent Deletion Warning
+
+
+Dear Developer,
+
+Your Google Cloud project black-transport-471706-j8 was shut down on  
+February 24, 2026 2:13:21 AM UTC.
+
+Shut-down projects and the data stored in them may be recovered for a  
+limited time before the projects are permanently deleted. If you'd like to  
+recover your project, you must cancel the project's permanent deletion  
+before March 26, 2026 2:13:21 AM UTC.
+
+To recover your shut-down project:
+
+Visit the Resources pending ...
+Message ID: 19c8d6c32ae45c80
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.003Z
+From: ant.wilson@supabase.com
+Subject: Your Supabase Project devlomatix's Project is going to be paused.
+Snippet: Hi there, To save on cloud resources I just did a scan of all our projects and identified those which have not seen sufficient activity for more than 7 days. Your project devlomatix&#39;s Project(ID:
+Body (first 500 chars):
+ ()
+
+Hi there,
+
+
+To save on cloud resources I just did a scan of all our projects and identified those which have not seen sufficient activity for more than 7 days.
+
+Your project devlomatix's Project (ID: aktgltsyknndirzhtcox) (https://supabase.com/dashboard/project/aktgltsyknndirzhtcox) from your organization Openclaw was one of those and it is scheduled to be paused in a couple of days.
+
+Your project is not currently paused but if it continues not to receive sufficient activity it wil...
+Message ID: 19c8be09d930f745
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.035Z
+From: Google <no-reply@accounts.google.com>
+Subject: Security alert
+Snippet: New signin to your account devlomatix@gmail.com We noticed a new sign-in to your Google Account. If this was you, you don&#39;t need to do anything. If not, we&#39;ll help you secure your account.
+Body (first 500 chars):
+[image: Google]
+New signin to your account
+
+
+devlomatix@gmail.com
+We noticed a new sign-in to your Google Account. If this was you, you don’t
+need to do anything. If not, we’ll help you secure your account.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=devlomatix@gmail.com&continue=https://myaccount.google.com/alert/nt/1771858509000?rfn%3D325%26rfnc%3D1%26eid%3D-704959413950648362%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notificati...
+Message ID: 19c8aff46ed2e7b3
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.041Z
+From: Google <no-reply@accounts.google.com>
+Subject: Security alert
+Snippet: New passkey added to your account devlomatix@gmail.com If you didn&#39;t add a passkey, someone might be using your account. Check and secure your account now. Check activity You can also see security
+Body (first 500 chars):
+[image: Google]
+New passkey added to your account
+
+
+devlomatix@gmail.com
+If you didn’t add a passkey, someone might be using your account. Check and
+secure your account now.
+Check activity
+<https://accounts.google.com/AccountChooser?Email=devlomatix@gmail.com&continue=https://myaccount.google.com/alert/nt/1771858506978?rfn%3D364%26rfnc%3D1%26eid%3D3758899864982385829%26et%3D0>
+You can also see security activity at
+https://myaccount.google.com/notifications
+You received this email to l...
+Message ID: 19c8aff39a14232b
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.044Z
+From: Platform Notifications <PlatformNotifications-noreply@google.com>
+Subject: Your project sublime-sunspot-488315-k3 has been shut down
+Snippet: Project Permanent Deletion Warning Dear Developer, Your Google Cloud project sublime-sunspot-488315-k3 was shut down on February 24, 2026 2:09:55 AM UTC. Shut-down projects and the data stored in them
+Body (first 500 chars):
+Project Permanent Deletion Warning
+
+
+Dear Developer,
+
+Your Google Cloud project sublime-sunspot-488315-k3 was shut down on  
+February 24, 2026 2:09:55 AM UTC.
+
+Shut-down projects and the data stored in them may be recovered for a  
+limited time before the projects are permanently deleted. If you'd like to  
+recover your project, you must cancel the project's permanent deletion  
+before March 26, 2026 2:09:55 AM UTC.
+
+To recover your shut-down project:
+
+Visit the Resources pending ...
+Message ID: 19c8d690d26728d0
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.045Z
+From: Notion Team <team@mail.notion.so>
+Subject: Tell us how you first heard about Notion
+Snippet: We&#39;re excited to hear from you. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ...
+Body (first 500 chars):
+( https://www.notion.so/?utm_campaign=HDYHAN+-+Core+-+2024&utm_campaignid=420&utm_campaigntype=transactional&utm_content=Email+1+-+J&utm_medium=email_action&utm_source=customer.io )
+
+Hi Devlomatix,
+
+Thanks so much for signing up for Notion. Could you let us know where you first heard about us? Your response helps us better serve our community.
+
+Please choose one of the options below. You’ll be routed to the form to submit your answer.
+
+How did you first hear about Notion?
+
+A ( https://...
+Message ID: 19c8bae031c28676
+Labels: [ 'CATEGORY_PROMOTIONS', 'UNREAD', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.046Z
+From: Indeed for Employers <no-reply@indeed.com>
+Subject: Weekly job summary
+Snippet: This is what your week looked like on Indeed ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+Body (first 500 chars):
+<!--TEMPLATE SETTTINGS-->
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    		
+
+  		        
+
+
+        
+
+
+
+
+
+
+
+
+        
+
+
+
+
+<!--END TEMPLATE SETTINGS-->
+<!-- Job arrays -->
+<!-- Sort jobs by their top call to action list item -->
+<!-- Velocity prints true when adding an item to an array this gets rid of it -->
+<!-- populate links -->
+<!-- remove per https://indeed.atlassian.net/browse/EMAILDEV-3553
+-->
+<!-- UNIVERSAL STYLES FOR CARDS -->
+<!-- END UNIVERSAL STYLES FOR CARDS -->
+<!--BANNER CONTENT-->
+<!--END BANNER CO...
+Message ID: 19c89f98cc8b7042
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.071Z
+From: Duolingo <hello@duolingo.com>
+Subject: Obligatory Japanese reminder
+Snippet: Sorry about this 💜 ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ...
+Body (first 500 chars):
+
+
+START A LESSON
+https://www.duolingo.com/course/ja/en?email_type=practice_reminder
+
+
+
+**It’s lesson time again**
+I know. I can’t believe it either, Laksh.
+
+
+
+---
+
+
+
+Tu
+: ❌
+We
+: ❌
+Th
+: ❌
+Fr
+: ✅
+Sa
+: ✅
+Su
+: ✅
+Mo
+: ❌
+
+
+
+---
+
+---
+
+If you'd rather not receive notifications, you can unsubscribe in
+https://www.duolingo.com/unsubscribe?type=notify_practice&email=devlomatix@gmail.com
+
+(c)  Duolingo
+5900 Penn Avenue
+Pittsburgh PA 15206
+USA
+Message ID: 19c89a6da436a096
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+
+=== NEW EMAIL ===
+Timestamp: 2026-02-24T03:27:33.086Z
+From: Google Play <googleplay-noreply@google.com>
+Subject: Devlomatix, upcoming changes to product merchandizing
+Snippet: Google Play Changes to purchase flow recommendations, featured products and cart abandonment reminders SERVICE UPDATE We&#39;re introducing changes to purchase flow recommendations, featured products
+Body (first 500 chars):
+Changes to purchase flow recommendations, featured products and cart  
+abandonment reminders
+
+SERVICE UPDATE
+
+We’re introducing changes to purchase flow recommendations  
+<https://c.gle/AEJ26qv9isrbwTSk3H1wGPfPdQipkDA_KKzX3nIQVWzwvXvvgoYvdvJ1N2hMI8BuB3KRzA5PLuekRhWm_HzblsQXKuKpRBX0YkF9B1-t32pPiFrOswfUIBF5V7MudpqdhXJaBlzOWxGjXIwxdBUCvx-pGP5IObXzT5UY9DPphMUDvRcFs1tZdzA6T5-22fATJc_OSwMYHxUTjqx_7sz1kMO1fCCtUJ29ut-ackpFlVH6zojVnoHuP60ehkYeXbicYwlPgJt1c10Yymj51uNAA4hu02MyiBQ-AoNEsMs6RqYEHwzJuuDA...
+Message ID: 19c8c220d9216109
+Labels: [ 'UNREAD', 'CATEGORY_UPDATES', 'INBOX' ]
+================
+
+[2026-02-24T03:28:33.057Z] list.messages length: 10 list keys: [ 'messages', 'nextPageToken', 'resultSizeEstimate' ]
+[2026-02-24T03:28:33.057Z] No new messages.
+[2026-02-24T03:29:33.657Z] list.messages length: 10 list keys: [ 'messages', 'nextPageToken', 'resultSizeEstimate' ]
+[2026-02-24T03:29:33.657Z] No new messages.

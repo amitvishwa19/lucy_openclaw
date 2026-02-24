@@ -147,13 +147,16 @@ function monitor() {
   listMessages(accessToken, (err, list) => {
     if (err) {
       console.error('[' + new Date().toISOString() + '] Error listing messages:', err.message);
-      // If it's an auth error, access token might be expired
       if (err.message.includes('401') || err.message.includes('invalid_token')) {
         console.error('!!! Access token may be expired. Please run get-tokens-save.js to get new credentials and restart this monitor.');
       }
+      if (RUN_ONCE) process.exit(1);
       setTimeout(monitor, 60 * 1000);
       return;
     }
+
+    // Debug: show what we got
+    console.log('[' + new Date().toISOString() + '] list.messages length:', list?.messages?.length, 'list keys:', list ? Object.keys(list) : 'none');
 
     if (!list.messages || list.messages.length === 0) {
       console.log('[' + new Date().toISOString() + '] No messages in INBOX.');
