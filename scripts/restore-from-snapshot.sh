@@ -5,6 +5,7 @@
 #  restore-from-snapshot.sh list     -> list files in snapshot
 #  restore-from-snapshot.sh show <file> -> show content of a file from snapshot
 #  restore-from-snapshot.sh extract <file> [dest] -> extract file to dest (default: workspace)
+#  restore-from-snapshot.sh restore  -> restore all files to workspace
 
 set -euo pipefail
 
@@ -64,6 +65,19 @@ case "$cmd" in
     mkdir -p "$(dirname "$dest")"
     echo "$content" > "$dest"
     echo "✅ Extracted to $dest"
+    ;;
+
+  restore)
+    # Extract all files to their original locations (within workspace)
+    echo "🔄 Restoring all files from snapshot..."
+    jq -r '.files | keys[]' "$SNAPSHOT" | while read -r file; do
+      echo "  restoring: $file"
+      content=$(jq -r --arg f "$file" '.files[$f]' "$SNAPSHOT")
+      dest="$WS/$file"
+      mkdir -p "$(dirname "$dest")"
+      echo "$content" > "$dest"
+    done
+    echo "✅ Restore complete"
     ;;
 
   *)
