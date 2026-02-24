@@ -61,6 +61,16 @@
 
 ---
 
+## 🛡️ Resilience & Self-Healing
+
+- [ ] Install systemd service for OpenClaw gateway (auto-restart on crash/boot)
+- [ ] Deploy watchdog cron job (1-minute health check + config rollback)
+- [ ] Implement config backup/rollback mechanism (last working config)
+- [ ] Create and maintain `restore-snapshot.json` (full state capture)
+- [ ] Verify self-healing by testing simulated failures
+
+---
+
 ## 📚 Documentation & Notes
 
 - [ ] Maintain `memory/YYYY-MM-DD.md` with full conversation logs
