@@ -69,26 +69,6 @@
 - [ ] Create and maintain `restore-snapshot.json` (full state capture)
 - [ ] Verify self-healing by testing simulated failures
 
-## 📱 Social Media Integration (Posting Only)
-
-- [ ] Check OpenClaw installation for existing `facebook`, `instagram`, `linkedin` plugins
-- [ ] Create Meta Developer App (Business type) with products: Facebook Login, Instagram Basic Display, Instagram Graph API, Pages API
-- [ ] Request Meta App Review for permissions: `pages_manage_posts`, `pages_read_engagement`, `instagram_basic`, `instagram_content_publish`
-- [ ] Add testers (your account) to develop in dev mode while waiting for review
-- [ ] Create LinkedIn Developer App; request Marketing Developer Platform access and add products: Sign In with LinkedIn, Share on LinkedIn
-- [ ] Obtain credentials:
-  - Facebook: App ID, App Secret, Page ID, Page Access Token (long-lived)
-  - Instagram: Business Account ID (linked to Page)
-  - LinkedIn: Client ID, Client Secret, Organization URN
-- [ ] Configure OpenClaw `openclaw.json` with plugin entries for each platform
-- [ ] Pair each channel via `/pair facebook`, `/pair instagram`, `/pair linkedin`
-- [ ] Test posting:
-  - `/facebook post "Test message"`
-  - `/instagram post "Test" --image sample.jpg`
-  - `/linkedin post "Company update"`
-- [ ] Handle token refresh automation (long-lived tokens expire after 60 days)
-- [ ] Document posting workflow and rate limits per platform
-
 ---
 
 ## 📚 Documentation & Notes
