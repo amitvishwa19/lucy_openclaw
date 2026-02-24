@@ -68,12 +68,17 @@ case "$cmd" in
     ;;
 
   restore)
-    # Extract all files to their original locations (within workspace)
+    # Extract all files to their original locations
     echo "🔄 Restoring all files from snapshot..."
     jq -r '.files | keys[]' "$SNAPSHOT" | while read -r file; do
       echo "  restoring: $file"
       content=$(jq -r --arg f "$file" '.files[$f]' "$SNAPSHOT")
-      dest="$WS/$file"
+      # Special case: openclaw.json goes to /home/ubuntu/.openclaw/, not workspace
+      if [[ "$file" == "openclaw.json" ]]; then
+        dest="/home/ubuntu/.openclaw/openclaw.json"
+      else
+        dest="$WS/$file"
+      fi
       mkdir -p "$(dirname "$dest")"
       echo "$content" > "$dest"
     done

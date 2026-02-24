@@ -39,7 +39,6 @@ fi
 
 # List of files to include (relative to workspace)
 FILES=(
-  "openclaw.json"
   "MEMORY.md"
   "TODO.md"
   "memory/$(date +%Y-%m-%d).md"
@@ -55,6 +54,13 @@ FILES=(
   "scripts/git_autosync.sh"
   "scripts/restore_from_github.sh"
 )
+
+# Also include the main OpenClaw config (outside workspace)
+MAIN_CONFIG="/home/ubuntu/.openclaw/openclaw.json"
+if [[ -f "$MAIN_CONFIG" ]]; then
+  content=$(jq -Rs '.' "$MAIN_CONFIG")
+  jq --arg path "openclaw.json" --argjson content "$content" '.files[$path] = $content' "$OUTPUT" > "$OUTPUT.tmp" && mv "$OUTPUT.tmp" "$OUTPUT"
+fi
 
 # For each file, if exists, add its content (as string) to JSON
 for f in "${FILES[@]}"; do
