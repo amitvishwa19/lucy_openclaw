@@ -26,6 +26,9 @@ const path = require('path');
 const WORKSPACE = '/home/ubuntu/.openclaw/workspace';
 const CRED_FILE = path.join(WORKSPACE, 'gmail-creds.json');
 
+const args = process.argv.slice(2);
+const RUN_ONCE = args.includes('--once') || args.includes('-o');
+
 let creds = null;
 const seenMessages = new Set();
 
@@ -172,6 +175,11 @@ function monitor() {
       if (newCount === 0) {
         console.log('[' + new Date().toISOString() + '] No new messages.');
       }
+    }
+
+    if (RUN_ONCE) {
+      console.log('--- Run once mode: exiting after this poll ---');
+      process.exit(0);
     }
 
     // Schedule next poll
