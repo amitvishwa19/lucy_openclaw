@@ -6,26 +6,25 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
   body { margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; color: #333; background: #fff; }
-  .page { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 20mm; box-sizing: border-box; }
-  .header { text-align: center; margin-bottom: 30px; border-bottom: 3px solid #2e7d32; padding-bottom: 20px; }
-  .header h1 { margin: 0; font-size: 28px; color: #2e7d32; font-weight: 700; }
-  .header .subtitle { font-size: 18px; color: #555; margin-top: 8px; font-weight: 500; }
-  .header .tagline { font-size: 14px; color: #777; margin-top: 4px; }
-  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
-  .info-block { background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid #2e7d32; }
-  .info-block h3 { margin: 0 0 10px 0; font-size: 14px; text-transform: uppercase; color: #2e7d32; letter-spacing: 0.5px; }
-  .info-block p { margin: 4px 0; font-size: 13px; line-height: 1.6; }
-  .info-block b { min-width: 120px; display: inline-block; color: #555; }
-  table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 13px; }
-  th { background: #2e7d32; color: white; text-align: left; padding: 12px 10px; font-weight: 500; }
-  td { padding: 10px; border-bottom: 1px solid #e0e0e0; }
+  .page { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 10mm; box-sizing: border-box; }
+  .header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #2e7d32; padding-bottom: 15px; }
+  .header h1 { margin: 0; font-size: 22px; color: #2e7d32; font-weight: 700; }
+  .header .subtitle { font-size: 16px; color: #555; margin-top: 5px; font-weight: 500; }
+  .header .tagline { font-size: 12px; color: #777; margin-top: 3px; }
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+  .info-block { background: #f9f9f9; padding: 10px; border-radius: 5px; border-left: 3px solid #2e7d32; }
+  .info-block h3 { margin: 0 0 6px 0; font-size: 12px; text-transform: uppercase; color: #2e7d32; letter-spacing: 0.5px; }
+  .info-block p { margin: 2px 0; font-size: 11px; line-height: 1.4; }
+  .info-block b { min-width: 80px; display: inline-block; color: #555; font-size: 11px; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 11px; }
+  th { background: #2e7d32; color: white; text-align: left; padding: 8px 6px; font-weight: 500; }
+  td { padding: 6px; border-bottom: 1px solid #e0e0e0; font-size: 10px; }
   tr:nth-child(even) { background: #f9f9f9; }
   .text-center { text-align: center; }
   .text-right { text-align: right; }
-  .notes-section { margin-top: 30px; padding: 15px; background: #fff8e1; border-left: 4px solid #ff9800; border-radius: 0 8px 8px 0; }
-  .notes-section h3 { margin: 0 0 10px 0; font-size: 14px; color: #e65100; }
-  .notes-section p { margin: 4px 0; font-size: 12px; line-height: 1.6; }
-  .footer-contact { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; font-size: 12px; color: #666; }
+  .notes-section { margin-top: 15px; padding: 10px; background: #fff8e1; border-left: 3px solid #ff9800; border-radius: 0 5px 5px 0; font-size: 10px; }
+  .notes-section h3 { margin: 0 0 6px 0; font-size: 12px; color: #e65100; }
+  .notes-section p { margin: 2px 0; font-size: 10px; line-height: 1.4; }
 </style>
 </head>
 <body>
@@ -47,14 +46,6 @@
     </div>
   </div>
 
-  <div class="info-block">
-    <h3>Customer</h3>
-    <p><b>Name:</b> {{CUSTOMER_NAME}}</p>
-    <p><b>Contact Person:</b> {{CONTACT_PERSON}}</p>
-    <p><b>Phone:</b> {{CUSTOMER_MOBILE}}</p>
-    <p><b>Address:</b> {{ADDRESS}}</p>
-  </div>
-
   <table>
     <tr>
       <th style="width: 60px;">Sr. No.</th>
@@ -72,17 +63,6 @@
     {{NOTE_TEXT}}
     <p><b>Payment Terms:</b> {{PAYMENT_TERMS}}</p>
     <p>{{THANKYOU}}</p>
-  </div>
-
-  <div class="footer-contact">
-    <div>
-      <b>Phone:</b> {{FOOTER_MOBILE}}<br>
-      <b>Address:</b> {{FOOTER_ADDRESS}}
-    </div>
-    <div style="text-align: right;">
-      <strong>Solar Cleaning Solution</strong><br>
-      <em>Clean Panels, Boost Energy</em>
-    </div>
   </div>
 </div>
 </body>
