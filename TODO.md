@@ -102,12 +102,12 @@
 ## 📧 Gmail Integration
 
 - [x] Gmail OAuth2 credentials obtained and stored (`gmail-creds.json`)
-- [x] Created `scripts/gmail-inbox.sh` — fetches inbox and sends Telegram summary
-- [ ] Install/enable a Gmail plugin or skill in OpenClaw (for native commands)
-- [ ] Alternatively, create a custom skill that wraps `gmail-inbox.sh` (skill.json added)
-- [ ] Test `/gmail inbox` via Telegram (after plugin/skill enabled)
-- [ ] Implement sending email functionality (requires MIME construction)
-- [ ] Set up automated daily summary via cron
+- [x] Created `scripts/gmail-inbox.sh` — fetches up to 20 messages with full headers, pagination, Telegram summary
+- [x] Added skill manifest for `/gmail inbox` (needs enabling)
+- [ ] Enable the `gmail-inbox` skill in OpenClaw (verify auto-discovery or manually enable)
+- [ ] Test `/gmail inbox` slash command in Telegram
+- [ ] Implement sending email (create `scripts/gmail-send.sh` + skill)
+- [ ] Set up automated daily inbox summary via cron
 - [ ] Add email parsing rules (auto-replies, filtering)
 
 ---
