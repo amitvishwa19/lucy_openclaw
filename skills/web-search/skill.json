@@ -1,0 +1,13 @@
+{
+  "name": "web-search",
+  "version": "0.1.0",
+  "description": "Search the web using DuckDuckGo (via ddgr CLI). No API key required.",
+  "author": "Lucy",
+  "commands": [
+    {
+      "name": "search",
+      "pattern": "search (.+)",
+      "handler": "./scripts/web-search.sh"
+    }
+  ]
+}
