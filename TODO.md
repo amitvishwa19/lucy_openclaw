@@ -101,13 +101,14 @@
 
 ## 📧 Gmail Integration
 
-- [ ] Research available Gmail plugin/skill for OpenClaw (official or community)
-- [ ] If plugin exists: install and enable in `openclaw.json`
-- [ ] Configure plugin to use `workspace/gmail-creds.json`
-- [ ] Test reading inbox: `/gmail inbox` or equivalent
-- [ ] Test sending email: `/gmail send "to@example.com" "subject" "body"`
-- [ ] If no plugin: consider building a custom skill using Gmail API (requires Node.js + googleapis library)
-- [ ] Set up email parsing automations (e.g., daily summary, auto-replies based on rules)
+- [x] Gmail OAuth2 credentials obtained and stored (`gmail-creds.json`)
+- [x] Created `scripts/gmail-inbox.sh` — fetches inbox and sends Telegram summary
+- [ ] Install/enable a Gmail plugin or skill in OpenClaw (for native commands)
+- [ ] Alternatively, create a custom skill that wraps `gmail-inbox.sh` (skill.json added)
+- [ ] Test `/gmail inbox` via Telegram (after plugin/skill enabled)
+- [ ] Implement sending email functionality (requires MIME construction)
+- [ ] Set up automated daily summary via cron
+- [ ] Add email parsing rules (auto-replies, filtering)
 
 ---
 
