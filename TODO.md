@@ -139,3 +139,13 @@
   - `/slack dm @user "Direct message"`
 - [ ] Set up Slack notifications for important events (Gmail alerts, system health)
 - [ ] Document Slack command usage and permissions
+
+## 📄 Quotation PDF Generator
+
+- [x] Create HTML template matching the example PDF style
+- [x] Install `wkhtmltopdf` for HTML → PDF conversion
+- [x] Build Python script `generate-quotation.py` that fills template from JSON data
+- [x] Test generation — produced valid PDF
+- [ ] Create Telegram skill to trigger quotation generation (e.g., send data via JSON)
+- [ ] Add more fields: logo image, taxes, terms
+- [ ] Make template configurable per business (Solar Cleaning vs Hospital CRM)
