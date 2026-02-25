@@ -1,13 +1,14 @@
 {
   "name": "quotation",
-  "version": "0.1.0",
-  "description": "Generate PDF quotations from JSON data using a template",
+  "version": "0.2.0",
+  "description": "Generate modern quotation PDFs from JSON data",
   "author": "Lucy",
   "commands": [
     {
       "name": "generate",
       "pattern": "quotation generate",
-      "handler": "./scripts/generate-quotation.py"
+      "handler": "./scripts/generate-quotation-modern.py",
+      "args": ["{{ attachment.path }}", "output.pdf"]
     }
   ]
 }
