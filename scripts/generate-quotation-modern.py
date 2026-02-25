@@ -57,5 +57,5 @@ if __name__ == "__main__":
     with open(tmp, "w") as f:
         f.write(html)
     out = sys.argv[2] if len(sys.argv) > 2 else "quotation-modern.pdf"
-    subprocess.run(["wkhtmltopdf", "--page-size", "A4", "--margin-top", "15mm", "--margin-bottom", "15mm", "--margin-left", "15mm", "--margin-right", "15mm", tmp, out], check=True)
+    subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "--page-size", "A4", "--margin-top", "15mm", "--margin-bottom", "15mm", "--margin-left", "15mm", "--margin-right", "15mm", tmp, out], check=True)
     print(f"✅ Generated {out}")
