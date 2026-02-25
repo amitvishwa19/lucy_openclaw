@@ -99,6 +99,16 @@
 - [ ] Document node capabilities and intended use cases (e.g., image editing, heavy compute, local file access)
 - [ ] Set up secure communication (ensure firewall allows port 18789 inbound from local network)
 
+## 📧 Gmail Integration
+
+- [ ] Research available Gmail plugin/skill for OpenClaw (official or community)
+- [ ] If plugin exists: install and enable in `openclaw.json`
+- [ ] Configure plugin to use `workspace/gmail-creds.json`
+- [ ] Test reading inbox: `/gmail inbox` or equivalent
+- [ ] Test sending email: `/gmail send "to@example.com" "subject" "body"`
+- [ ] If no plugin: consider building a custom skill using Gmail API (requires Node.js + googleapis library)
+- [ ] Set up email parsing automations (e.g., daily summary, auto-replies based on rules)
+
 ---
 
 **Completed items will be moved to a separate "Done" section with date.**

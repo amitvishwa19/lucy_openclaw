@@ -1,5 +1,6 @@
 {
-  "access_token": "ya29.a0ATkoCc7jze-lkcCcUFQokUJc6_jHRNFkP8mBnT1PJUNBgV-7sVK-fnvhPC0Os0q34kIfkptv6e3mVd4nfPbjSLcEged0kBanppwvRYcYtc6zSOv1Jf0EZh58iD4asimIkszp6u9FxYcCHOdcZWIiE2mTWZ8-1BvwMQShXDuDnU2gvxRuoe3887noH9G0dsCqPeFoXZYaCgYKAXgSARcSFQHGX2MiyNIw75ErxJtshGZ9qOvvEg0206",
-  "refresh_token": "1//04g-L5w3RshFACgYIARAAGAQSNwF-L9IrjKQIQaP_-lzJeCwpCr_bZeBf0bA-cihkqAzQ9Qe2f6cQmqGg0A-hNmDOC-w8bOgcAVA",
-  "scope": "https://www.googleapis.com/auth/gmail.modify"
+  "type": "authorized_user",
+  "client_id": "387436718940-ta2bavieov4901nutotgav1oil026arc.apps.googleusercontent.com",
+  "client_secret": "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",
+  "refresh_token": "1//0gluI8Gq9Zah2CgYIARAAGBASNwF-L9IrYTJYpveiSCbqsHEsqhKiu0PBTeYCITeKw-Y-MAtfvkxnk5qYhctZVZJBR5LPUvOMOpA"
 }
