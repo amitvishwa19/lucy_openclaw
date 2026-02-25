@@ -1,0 +1,39 @@
+{
+  "business_name": "Go Green Mitra",
+  "gstin": "24CKEPK0044A1Z0",
+  "mobile": "+917046077010",
+  "email": "contact@gogreenmitra.com",
+  "website": "gogreenmitra.com",
+  "quote_no": "SCS/60/2025-26",
+  "quote_date": "22-Feb-2025",
+  "validity": "30Days",
+  "services": [
+    {
+      "description": "Basic Clean",
+      "frequency": "Perfect for one-time cleaning needs",
+      "quantity": "₹18 per panel",
+      "rate": "",
+      "total": "✔ Professional dry & wet cleaning\n✔ Visual inspection report\n✔ Same-day service\n✔ Any number of panels"
+    },
+    {
+      "description": "Standard Clean (Most Popular)",
+      "frequency": "Ideal for regular maintenance",
+      "quantity": "₹16 per panel",
+      "rate": "",
+      "total": "✔ All Basic Clean features included\n✔ Soft cleaning chemical\n✔ Performance check & report\n✔ Before/after photo proof\n✔ Priority scheduling"
+    },
+    {
+      "description": "AMC Plan",
+      "frequency": "Best value with annual contract",
+      "quantity": "₹14 per panel",
+      "rate": "",
+      "total": "✔ All Standard Clean features included\n✔ Lowest per-panel rate\n✔ Scheduled cleanings throughout the year\n✔ Free emergency visits\n✔ Weekly dashboard of unit output\n✔ Custom app for monitoring\n✔ Detailed performance reports\n✔ Dedicated account manager\n✔ 10% off additional services"
+    }
+  ],
+  "note": "",
+  "additional_charge": 0,
+  "thankyou": "Thank you for considering Go Green Mitra!",
+  "payment_terms": "Quarterly Advance",
+  "footer_mobile": "+917046077010",
+  "footer_address": "Vadodara"
+}
