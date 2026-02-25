@@ -19,20 +19,19 @@ def render_template(data):
     
     # Build service rows HTML
     rows_html = ""
-    for idx, item in enumerate(data["services"], start=1):
+    for idx, item in enumerate(data.get("services", []), start=1):
         freq = item.get("frequency", "")
         qty = item.get("quantity", "")
         rate = item.get("rate", "")
         total = item.get("total", "N/A")
-        rows_html += f"""
-    <tr>
+        rows_html += f"""    <tr>
       <td>{idx}</td>
       <td>{item['description']}<br><small>{freq}</small></td>
       <td class="text-center">{qty}</td>
       <td class="text-right">{rate}</td>
       <td class="text-right">{total}</td>
     </tr>
-    """
+"""
     
     # Prepare note text with additional charge if present
     note_text = data.get("note", "")
@@ -40,24 +39,27 @@ def render_template(data):
         note_text += f"<br>Note:- If a liquid wash is required, an additional charge of ₹{data['additional_charge']} per panel will be applied (Per service)"
     
     # Substitute all placeholders
-    html = html.replace("{{BUSINESS_NAME}}", data.get("business_name", ""))
-    html = html.replace("{{GSTIN}}", data.get("gstin", ""))
-    html = html.replace("{{MOBILE}}", data.get("mobile", ""))
-    html = html.replace("{{EMAIL}}", data.get("email", ""))
-    html = html.replace("{{WEBSITE}}", data.get("website", ""))
-    html = html.replace("{{CUSTOMER_NAME}}", data.get("customer_name", ""))
-    html = html.replace("{{CONTACT_PERSON}}", data.get("contact_person", ""))
-    html = html.replace("{{CUSTOMER_MOBILE}}", data.get("customer_mobile", ""))
-    html = html.replace("{{ADDRESS}}", data.get("address", ""))
-    html = html.replace("{{QUOTE_NO}}", data.get("quote_no", ""))
-    html = html.replace("{{QUOTE_DATE}}", data.get("quote_date", datetime.now().strftime("%d-%b-%Y")))
-    html = html.replace("{{VALIDITY}}", data.get("validity", "30Days"))
+    def s(placeholder, default=""):
+        return data.get(placeholder, default)
+    
+    html = html.replace("{{BUSINESS_NAME}}", s("business_name"))
+    html = html.replace("{{GSTIN}}", s("gstin"))
+    html = html.replace("{{MOBILE}}", s("mobile"))
+    html = html.replace("{{EMAIL}}", s("email"))
+    html = html.replace("{{WEBSITE}}", s("website"))
+    html = html.replace("{{CUSTOMER_NAME}}", s("customer_name"))
+    html = html.replace("{{CONTACT_PERSON}}", s("contact_person"))
+    html = html.replace("{{CUSTOMER_MOBILE}}", s("customer_mobile"))
+    html = html.replace("{{ADDRESS}}", s("address"))
+    html = html.replace("{{QUOTE_NO}}", s("quote_no"))
+    html = html.replace("{{QUOTE_DATE}}", s("quote_date", datetime.now().strftime("%d-%b-%Y")))
+    html = html.replace("{{VALIDITY}}", s("validity", "30Days"))
     html = html.replace("{{ROWS}}", rows_html)
     html = html.replace("{{NOTE_TEXT}}", note_text)
-    html = html.replace("{{THANKYOU}}", data.get("thankyou", "Thank you for considering Solar Cleaning Solutions!"))
-    html = html.replace("{{PAYMENT_TERMS}}", data.get("payment_terms", "Quarterly Advance"))
-    html = html.replace("{{FOOTER_MOBILE}}", data.get("footer_mobile", data.get("mobile", "")))
-    html = html.replace("{{FOOTER_ADDRESS}}", data.get("footer_address", data.get("address", "")))
+    html = html.replace("{{THANKYOU}}", s("thankyou", "Thank you for considering Solar Cleaning Solutions!"))
+    html = html.replace("{{PAYMENT_TERMS}}", s("payment_terms", "Quarterly Advance"))
+    html = html.replace("{{FOOTER_MOBILE}}", s("footer_mobile", s("mobile")))
+    html = html.replace("{{FOOTER_ADDRESS}}", s("footer_address", s("address")))
     
     return html
 

@@ -1,0 +1,43 @@
+{
+  "business_name": "Aarti Enterprise",
+  "gstin": "24CKEPK0044A1Z0",
+  "mobile": "9377888700",
+  "email": "contact@solarcleaningsolution.in",
+  "website": "www.Solarcleaningsolution.in",
+  "customer_name": "Rajeswat Planet Tower 10",
+  "contact_person": "Mr Pratik Kamdar",
+  "customer_mobile": "9924115279",
+  "address": "Vadodara",
+  "quote_no": "SCS/60/2025-26",
+  "quote_date": "22-Feb-2025",
+  "validity": "30Days",
+  "services": [
+    {
+      "description": "Solar Panel Water-based Cleaning Service",
+      "frequency": "Once in a month (30-day frequency)",
+      "quantity": 1,
+      "rate": "40.00",
+      "total": "N/A"
+    },
+    {
+      "description": "Solar Panel Water-based Cleaning Service",
+      "frequency": "Twice in a month (15-day frequency)",
+      "quantity": 12,
+      "rate": "25.00",
+      "total": "N/A"
+    },
+    {
+      "description": "Solar Panel Water-based Cleaning Service",
+      "frequency": "(Custom frequency)",
+      "quantity": 24,
+      "rate": "20.00",
+      "total": "N/A"
+    }
+  ],
+  "note": "",
+  "additional_charge": 4,
+  "thankyou": "Thank you for considering Solar Cleaning Solutions!",
+  "payment_terms": "Quarterly Advance",
+  "footer_mobile": "9924115279",
+  "footer_address": "Vadodara"
+}
