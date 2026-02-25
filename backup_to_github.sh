@@ -47,6 +47,21 @@ if git push origin main >> "$LOG" 2>&1; then
   else
     echo "$(date '+%Y-%m-%d %H:%M:%S'): Snapshot FAILED." >> "$LOG"
   fi
+
+  # Send Telegram notification with today's memory file
+  BOT_TOKEN=$(jq -r .channels.telegram.botToken /home/ubuntu/.openclaw/openclaw.json 2>/dev/null || echo "")
+  if [ -n "$BOT_TOKEN" ] && [ "$BOT_TOKEN" != "null" ]; then
+    TODAY=$(date +%Y-%m-%d)
+    MEMFILE="$WS/memory/$TODAY.md"
+    if [ -f "$MEMFILE" ]; then
+      LOCAL_TIME=$(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M:%S')
+      CAPTION="✅ Backup completed at $LOCAL_TIME. Conversation for $TODAY attached."
+      curl -s -F "chat_id=8228016833" \
+           -F "document=@$MEMFILE" \
+           -F "caption=$CAPTION" \
+           "https://api.telegram.org/bot$BOT_TOKEN/sendDocument" >> "$LOG" 2>&1 || true
+    fi
+  fi
 else
   echo "$(date '+%Y-%m-%d %H:%M:%S'): Backup FAILED to push. Check auth/network." >> "$LOG"
   exit 1
