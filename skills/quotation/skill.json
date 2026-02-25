@@ -1,0 +1,13 @@
+{
+  "name": "quotation",
+  "version": "0.1.0",
+  "description": "Generate PDF quotations from JSON data using a template",
+  "author": "Lucy",
+  "commands": [
+    {
+      "name": "generate",
+      "pattern": "quotation generate",
+      "handler": "./scripts/generate-quotation.py"
+    }
+  ]
+}
