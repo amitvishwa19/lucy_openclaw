@@ -1,0 +1,13 @@
+{
+  "name": "gmail-inbox",
+  "version": "0.1.0",
+  "description": "Fetch latest Gmail inbox messages",
+  "author": "Lucy",
+  "commands": [
+    {
+      "name": "inbox",
+      "pattern": "gmail inbox",
+      "handler": "./scripts/gmail-inbox.sh"
+    }
+  ]
+}
