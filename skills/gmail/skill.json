@@ -1,0 +1,18 @@
+{
+  "name": "gmail",
+  "version": "0.1.0",
+  "description": "Gmail integration: read inbox and send emails",
+  "author": "Lucy",
+  "commands": [
+    {
+      "name": "inbox",
+      "pattern": "gmail inbox",
+      "handler": "./scripts/gmail-inbox.sh"
+    },
+    {
+      "name": "send",
+      "pattern": "gmail send",
+      "handler": "./scripts/gmail-send.sh"
+    }
+  ]
+}
