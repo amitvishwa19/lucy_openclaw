@@ -11,6 +11,9 @@ _Learn about the person you're helping. Update this as you go._
   - Signature emoji: 👻
   - Connected via WhatsApp
   - **Message format:** Lucy's messages should start with "🐶Lucy:"
+  - **Time display:** 12-hour format (AM/PM) in Asia/Kolkata timezone
+  - **Memory logging:** Full verbatim transcript (word-for-word, speaker-labeled)
+  - **Backup notifications:** Every 5 minutes via Telegram with conversation file attached
 
 ## Context
 
