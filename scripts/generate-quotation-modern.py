@@ -10,13 +10,12 @@ def render(data):
     
     rows = ""
     for i, s in enumerate(data.get("services", []), 1):
+        # New format: Description, Frequency, Features (bulleted list in total field)
+        features = s.get('total', 'N/A').replace('\n', '<br>')
         rows += f"""    <tr>
-      <td>{i}</td>
-      <td>{s['description']}<br><small>{s.get('frequency','')}</small></td>
-      <td class="text-center">{s.get('frequency','') if s.get('frequency') else ''}</td>
-      <td class="text-center">{s.get('quantity','')}</td>
-      <td class="text-right">{s.get('rate','')}</td>
-      <td class="text-right">{s.get('total','N/A')}</td>
+      <td>{s['description']}</td>
+      <td>{s.get('frequency','')}</td>
+      <td><small>{features}</small></td>
     </tr>
 """
     note = data.get("note", "")
