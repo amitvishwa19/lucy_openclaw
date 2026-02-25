@@ -142,6 +142,13 @@
 
 ## 📄 Quotation PDF Generator
 
+Design completed:
+- Modern template created and approved
+- PDF generation tested (453KB output)
+- wktopdf installed
+- Python generator script ready (generate-quotation-modern.py)
+---
+
 - [x] Create HTML template matching the example PDF style
 - [x] Install `wkhtmltopdf` for HTML → PDF conversion
 - [x] Build Python script `generate-quotation.py` that fills template from JSON data
