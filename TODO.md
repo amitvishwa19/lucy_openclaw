@@ -113,3 +113,29 @@
 ---
 
 **Completed items will be moved to a separate "Done" section with date.**
+
+## 💬 Slack Integration
+
+- [ ] Create Slack app at https://api.slack.com/apps (Devlomatix Bot)
+- [ ] Add bot token scopes: `chat:write`, `channels:read`, `groups:read`, `im:write`, `reactions:write` (optional)
+- [ ] Install app to workspace, obtain:
+  - Signing Secret
+  - Bot User OAuth Token (`xoxb-...`)
+- [ ] Add Slack plugin config to `openclaw.json`:
+  ```json
+  "plugins": {
+    "entries": {
+      "slack": {
+        "enabled": true,
+        "signingSecret": "...",
+        "botToken": "xoxb-..."
+      }
+    }
+  }
+  ```
+- [ ] Pair Slack workspace via `/pair slack` and approve in Slack DM
+- [ ] Test posting:
+  - `/slack post #channel "Message"`
+  - `/slack dm @user "Direct message"`
+- [ ] Set up Slack notifications for important events (Gmail alerts, system health)
+- [ ] Document Slack command usage and permissions
