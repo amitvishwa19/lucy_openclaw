@@ -48,13 +48,14 @@ if git push origin main >> "$LOG" 2>&1; then
     echo "$(date '+%Y-%m-%d %H:%M:%S'): Snapshot FAILED." >> "$LOG"
   fi
 
-  # Send Telegram notification with today's memory file
+  # Send Telegram notification with today's memory file ONLY if it changed
   BOT_TOKEN=$(jq -r .channels.telegram.botToken /home/ubuntu/.openclaw/openclaw.json 2>/dev/null || echo "")
   if [ -n "$BOT_TOKEN" ] && [ "$BOT_TOKEN" != "null" ]; then
     TODAY=$(date +%Y-%m-%d)
     MEMFILE="$WS/memory/$TODAY.md"
-    if [ -f "$MEMFILE" ]; then
-      LOCAL_TIME=$(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M:%S')
+    # Check if memory file was part of this commit
+    if git show --name-only HEAD | grep -q "^$MEMFILE$"; then
+      LOCAL_TIME=$(TZ=Asia/Kolkata date '+%I:%M %p')
       CAPTION="✅ Backup completed at $LOCAL_TIME. Conversation for $TODAY attached."
       curl -s -F "chat_id=8228016833" \
            -F "document=@$MEMFILE" \
