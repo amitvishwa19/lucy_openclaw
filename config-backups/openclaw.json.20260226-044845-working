@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.9",
+    "lastTouchedAt": "2026-02-26T04:40:54.113Z"
+  },
+  "env": {
+    "vars": {
+      "GEMINI_API_KEY": "AIzaSyAXGaBt6-sALMy4vmxWwP3lP3HR-D5anm8"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-26T04:40:54.107Z",
+    "lastRunVersion": "2026.2.9",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/stepfun/step-3.5-flash:free"
+      },
+      "models": {
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "openrouter/stepfun/step-3.5-flash:free": {},
+        "openrouter/google/gemini-2.0-flash-001:free": {
+          "alias": "Gemini Flash 2.0 (Free)"
+        }
+      },
+      "workspace": "/home/ubuntu/.openclaw/workspace",
+      "compaction": {
+        "reserveTokensFloor": 10000
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "daily-planner",
+        "name": "Daily Planner",
+        "subagents": {
+          "allowAgents": [
+            "image-analyzer"
+          ]
+        },
+        "tools": {
+          "allow": [
+            "memory.search",
+            "message.send"
+          ]
+        }
+      },
+      {
+        "id": "image-analyzer",
+        "name": "Image Analyzer",
+        "skills": [
+          "image-analyzer"
+        ]
+      }
+    ]
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "boot-md": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8629643242:AAExZjNM-DNxhT-y4sIV2awWoQfT2tMxWkU",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    },
+    "slack": {
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "enabled": true,
+      "botToken": "xoxb-5390340339383-10570812821463-vleAfiusMpjmVUMXEk1DJtx2",
+      "appToken": "xapp-1-A0AH4QWV65B-10582854043269-278009bccd68bbbe82d18fb3f0d8947530fe304f9118950f99765e09ab2c0b2f",
+      "userTokenReadOnly": true,
+      "groupPolicy": "open"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "auth": {
+      "mode": "token",
+      "token": "__REDACTED__"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "slack": {
+        "enabled": true
+      }
+    }
+  }
+}
