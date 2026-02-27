@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenClaw Real-Time Backup Watcher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/.openclaw/workspace/real_time_backup.sh
+Restart=always
+RestartSec=10
+Environment=DISPLAY=
+Environment=XAUTHORITY=
+
+[Install]
+WantedBy=default.target
